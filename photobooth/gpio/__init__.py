@@ -34,7 +34,7 @@ class Gpio:
         self._comm = comm
         self._gpio = None
 
-        self._is_trigger = False
+        self._is_trigger = True
         self._is_enabled = config.getBool('Gpio', 'enable')
         self._countdown_time = config.getInt('Photobooth', 'countdown_time')
 

@@ -33,7 +33,7 @@ class CameraGphoto2(CameraInterface):
 
         super().__init__()
 
-        self.hasPreview = True
+        self.hasPreview = False
         self.hasIdle = True
 
         logging.info('Using python-gphoto2 bindings')

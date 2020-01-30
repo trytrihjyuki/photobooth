@@ -175,7 +175,7 @@ class Camera:
         #picture_doubled = picture
         picture = picture.rotate(90)
         byte_data = BytesIO()
-        picture.save(byte_data, format='jpeg')
+        #picture.save(byte_data, format='jpeg')
         self._comm.send(Workers.MASTER,
                         StateMachine.CameraEvent('review', byte_data))
         self._pictures = []

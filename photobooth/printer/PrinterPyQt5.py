@@ -57,5 +57,6 @@ class PrinterPyQt5(Printer):
             picture.rect()))
 
         painter = QtGui.QPainter(self._printer)
+        painter.rotate(90)
         painter.drawImage(self._printer.pageRect(), picture, picture.rect())
         painter.end()

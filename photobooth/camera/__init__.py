@@ -170,6 +170,10 @@ class Camera:
             resized = shot.resize(self._pic_dims.thumbnailSize)
             picture.paste(resized, self._pic_dims.thumbnailOffset[i])
 
+        # Creating doubled photo
+        #width, height = picture.size
+        #picture_doubled = picture
+        picture = picture.rotate(90)
         byte_data = BytesIO()
         picture.save(byte_data, format='jpeg')
         self._comm.send(Workers.MASTER,
